@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/trumbowyg.min.css">
+  <title>Tiket Keluhan</title>
+  <style>
+    .jumbotron {
+      background: #0256AC;
+      color: #fff;
+    }
+    .margin-top-2 {
+      margin-top: 20px;
+    }
+    .list-group * {
+      font-weight: bold;
+    }
+    .list-group p {
+      font-size: 12px;
+      padding-top: 4px;
+    }
+    .panel-default .panel-body {
+      background-color: #F6F7F8;
+    }
+    .footer-content {
+      margin-bottom: 20px;
+    }
+    .title-ticket a {
+      color: #d8d8d8;
+      text-decoration: none;
+    }
+    .title-ticket a:hover {
+      color: #fff;
+    }
+    .title-ticket a::after {
+      content: "/";
+      padding-left: 4px;
+    }
+    .title-ticket a::after:hover {
+      color: red;
+    }
+
+    /* input style */
+    .custom-file-input {
+      background: #F6F7F8;
+      width: 100%;
+      border: 1px solid #CCCCCC;
+    }
+    .custom-file-input::-webkit-file-upload-button {
+      visibility: hidden;
+      padding-right: 35px;
+      padding-top: 9px;
+    }
+    .custom-file-input::before {
+      content: 'Select File';
+      display: inline-block;
+      color: rgb(226, 226, 226);
+      background: #337AB7;
+      border: 2px solid rgb(226, 226, 226);
+      border-radius: 3px;
+      padding: 8px 15px;
+      outline: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    .custom-file-input:active::before {
+      background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+
+    .attachment {
+      display: flex;
+    }
+    .attachment button {
+      white-space: nowrap;
+    }
+    .button-add {
+      background: #337AB7;
+      color: #fff;
+      border: none;
+      padding: 0 30px;
+    }
+    .btn {
+      border-radius: 0;
+    }
+    .list-group-item .status-ticket {
+      position: absolute;
+      line-height:inherit ;
+      right: 10px;
+      bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="jumbotron">
+    <div class="container title-ticket">
+      <h2>Open Ticket</h2>
+      <span>
+        <a href="#">Home</a>
+        <a href="#">Create Ticket</a>
+        <span>Send Ticket</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12">
+          <b>Your Recent Ticket </b>
+          <div class="list-group margin-top-2">
+            <a href="#" class="list-group-item">
+              <h5 class="list-group-item-heading">#1425 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto in officiis, delectus corrupti quam...</h5>
+              <span class="btn btn-sm btn-danger status-ticket"><i></i>Closed</span>
+              <p class="list-group-item-text">2 months ago</p>
+            </a>
+            <a href="#" class="list-group-item">
+              <h5 class="list-group-item-heading">#1425 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto in officiis, delectus corrupti quam...</h5>
+              <span class="btn btn-sm btn-info status-ticket"><i></i>Open</span>
+              <p class="list-group-item-text">2 months ago</p>
+            </a>
+            <a href="#" class="list-group-item">
+              <h5 class="list-group-item-heading">#1425 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto in officiis, delectus corrupti quam...</h5>
+              <span class="btn btn-sm btn-danger status-ticket"><i></i>Closed</span>
+              <p class="list-group-item-text">2 months ago</p>
+            </a>
+          </div>
+
+        <b>Ticket information</b>
+        <form>
+        <div class="panel panel-default margin-top-2">
+          <div class="panel-body">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="text" class="form-control" id="Name" placeholder="Name">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="exampleInputPassword2">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label for="exampleInputEmail3">Departement</label>
+                  <select name="departement" id="departement" class="form-control">
+                    <option value="Technical Support">Technical Support</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="exampleInputEmail4">Related Service</label>
+                  <select name="relatedService" id="relatedservice" class="form-control">
+                    <option value="none">none</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="exampleInputPassword5">Priority</label>
+                  <select name="priority" id="priority" class="form-control">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- batas panel form -->
+        <b>Message</b>
+        <div class="panel panel-default margin-top-2">
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="exampleInputEmail6">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Subject">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword7">Message</label>
+              <div id="message"></div>
+            </div>
+          </div>
+        </div>
+
+        <b>Attachments</b>
+        <div class="panel panel-default margin-top-2">
+          <div class="panel-body attachment">
+            <!-- <div class="form-group"> -->
+              <input type="file" class="custom-file-input" id="file" placeholder="Subject">
+              <button class="button-add"> <i class="fa fa-plus"></i></button>
+            <!-- </div> -->
+          </div>
+          <div id="more-input">
+          </div>
+        </div>
+
+          <div class="footer-content">
+            <button id="idSubmit" type="submit" class="btn btn-primary">Submit</button>
+            <button id="idCancel" type="reset" class="btn btn-default">Cancel</button>
+          </div>
+        </form>
+      </div> 
+      <!-- batas col md 9 -->
+
+      
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <script src="js/trumbowyg.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // set value here with .html("your value")
+      $('#message').trumbowyg();
+
+      $('#idCancel').on('click', function() {
+        $('#message').trumbowyg().html('');
+      })
+
+      $('.button-add').on('click', function(e) {
+        e.preventDefault();
+        $('#more-input').append(`
+          <div class="panel-body attachment input-added">
+              <input type="file" class="custom-file-input" id="file" placeholder="Subject">
+              <button class="btn btn-danger remove-input"> <i class="fa fa-trash"></i> </button>
+          </div>
+        `)
+      });
+
+      $(this).on('click', '.remove-input', function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove();
+      })
+    })
+  </script>
+</body>
+</html>

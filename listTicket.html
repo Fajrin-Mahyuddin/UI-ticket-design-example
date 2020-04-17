@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/trumbowyg.min.css">
+  <title>Tiket Keluhan</title>
+  <style>
+    .jumbotron {
+      background: #0256AC;
+      color: #fff;
+    }
+    .margin-top-2 {
+      margin-top: 20px;
+    }
+    .list-group .list-group-item-heading {
+      font-weight: bold;
+    }
+    .list-group-item .title-status {
+      color: #aaaaaa;
+    }
+    .panel-default .panel-heading {
+      background-color: rgba(111, 179, 224, 0.582);
+      font-weight: bold;
+    }
+    .panel-heading .sub-title {
+      font-weight: normal;
+      font-size: 13px;
+      display: block;
+      margin-top: 8px;
+    }
+    .panel-title a {
+      text-decoration: none;
+    }
+    .footer-content {
+      margin-bottom: 20px;
+    }
+    .title-ticket a {
+      color: #d8d8d8;
+      text-decoration: none;
+    }
+    .title-ticket a:hover {
+      color: #fff;
+    }
+    .title-ticket a::after {
+      content: "/";
+      padding-left: 4px;
+    }
+    /* .title-ticket a::after:hover {
+      color: red;
+    } */
+    .list-group-item-title {
+      color: #aaaaaa;
+      font-size: 13px;
+    }
+    .button-action {
+      padding:  5px 20px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      right: 12px;
+    }
+    
+    .button-action a {
+      margin-right: 10px;
+      padding:  5px 25px;
+    }
+    .btn {
+      border-radius: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="jumbotron">
+    <div class="container title-ticket">
+      <h2>View Ticket</h2>
+      <span>
+        <a href="#">Home</a>
+        <a href="#">Create Ticket</a>
+        <span>Send Ticket</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+     
+      <div class="col-md-12">
+        <b>Ticket Information </b>
+        <div class="list-group margin-top-2">
+          <div class="list-group-item">
+            <h5 class="list-group-item-heading">#1425 - User gagal login ke ...</h5>
+            <span class="title-status"><i class="fa fa-circle"></i> Closed</span> 
+          </div>
+          <div class="list-group-item">
+            <h5 class="list-group-item-title">Departement</h5>
+            <span><i></i>Tecnical Support</span>
+          </div>
+          <div class="list-group-item">
+            <h5 class="list-group-item-title">Submitted</h5>
+            <span><i></i>Sunday, Januari 26th, 2020</span>
+          </div>
+          <div class="list-group-item">
+            <h5 class="list-group-item-title">Priority</h5>
+            <span><i></i>High</span>
+          </div>
+        </div>
+        <div class="button-action">
+          <a href="#" class="btn btn-primary">Reply</a>
+          <a href="#" class="btn btn-default">Closed</a>
+        </div>
+        <hr>
+        <b>Ticket information</b>
+        <div class="alert alert-danger margin-top-2">
+          This ticket has been closed !
+        </div>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <i class="fa fa-pencil-square"></i> Reply
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail6">Subject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword7">Message</label>
+                    <div id="editor"></div>
+                  </div>
+                  <div class="footer-content">
+                    <button id="idSubmit" type="submit" class="btn btn-primary">Submit</button>
+                    <button id="idCancel" type="reset" class="btn btn-default">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default margin-top-2">
+          <div class="panel-heading">
+            <i class="fa fa-user-circle"></i> Baco
+            <div class="sub-title">
+              <span class="sub-title-first">Staff</span>
+              <span class="sub-title-second pull-right">Sunday, March 27th, 2020</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <strong>Lorem ipsum</strong> 
+
+            <p>dolor sit amet consectetur, adipisicing elit. Numquam iure harum temporibus nemo? Molestias consectetur molestiae quo doloremque error nisi quidem labore esse eius quae. </p> 
+
+            <p>Sunt vel ut, incidunt sit libero ab nulla quas consectetur consequuntur repellendus quibusdam reiciendis atque dolor sint id mollitia aliquam aperiam quaerat rerum doloribus natus ullam officia! Amet blanditiis obcaecati reiciendis dolores hic earum illo, voluptatem harum corporis porro eius in, pariatur qui maxime alias accusamus nulla. Atque excepturi enim vitae necessitatibus placeat maiores incidunt eaque facilis, quaerat soluta autem ea explicabo quae deserunt nisi commodi.</p>
+
+            Lorem <br />
+            meorl
+          </div>
+        </div>
+
+        <div class="panel panel-default margin-top-2">
+          <div class="panel-heading">
+            <i class="fa fa-user-circle"></i> Baccang
+            <div class="sub-title">
+              <span class="sub-title-first">User</span>
+              <span class="sub-title-second pull-right">Sunday, March 27th, 2020</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <strong>Lorem ipsum</strong> 
+
+            <p>dolor sit amet consectetur, adipisicing elit. Numquam iure harum temporibus nemo? Molestias consectetur molestiae quo doloremque error nisi quidem labore esse eius quae. </p> 
+
+            <p>Sunt vel ut, incidunt sit libero ab nulla quas consectetur consequuntur repellendus quibusdam reiciendis atque dolor sint id mollitia aliquam aperiam quaerat rerum doloribus natus ullam officia! Amet blanditiis obcaecati reiciendis dolores hic earum illo, voluptatem harum corporis porro eius in, pariatur qui maxime alias accusamus nulla. Atque excepturi enim vitae necessitatibus placeat maiores incidunt eaque facilis, quaerat soluta autem ea explicabo quae deserunt nisi commodi.</p>
+
+            Lorem <br />
+            meorl
+          </div>
+        </div>
+        
+      </div> 
+      <!-- batas col md 9 -->
+    </div>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <script src="js/trumbowyg.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // set value here
+      $('#editor').trumbowyg().html();
+      // or get value here
+      var valueOfMessage = $('#editor').trumbowyg().html();
+
+      $('#idSubmit').on('click', function() {
+        console.log($('#editor').html());
+      })
+    })
+  </script>
+</body>
+</html>
